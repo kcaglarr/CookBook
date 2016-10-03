@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bsy-Fs-QkQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cook Book-->
+        <scene sceneID="xhA-nt-c81">
+            <objects>
+                <viewController id="QHv-9U-faq" customClass="CookBookViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="30u-c1-9DY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0hq-FF-Uo3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KWt-ma-fJB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k7b-rZ-lt7">
+                                <color key="backgroundColor" red="1" green="0.93165752128520962" blue="0.7254922770731328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" rowHeight="100" id="iwa-u3-qGT" customClass="CookBookTableViewCell" customModule="CookBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iwa-u3-qGT" id="aaH-Gt-OON">
+                                            <frame key="frameInset" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cookName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQC-4w-L8m">
+                                                    <color key="backgroundColor" red="1" green="0.93165752130000001" blue="0.72549227709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8IW-43-NHv">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="Kqp-he-Ebg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL0-Fx-cK4">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="j2R-vp-OkN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cookDuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0L-Cj-pEO">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="104" id="sAE-B6-yYi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.93165752130000001" blue="0.72549227709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="8IW-43-NHv" firstAttribute="top" secondItem="aaH-Gt-OON" secondAttribute="topMargin" constant="10" id="EHV-c6-ih7"/>
+                                                <constraint firstItem="DQC-4w-L8m" firstAttribute="leading" secondItem="xL0-Fx-cK4" secondAttribute="leading" id="K3o-Un-l6N"/>
+                                                <constraint firstItem="8IW-43-NHv" firstAttribute="top" secondItem="DQC-4w-L8m" secondAttribute="top" id="Na8-pH-Elh"/>
+                                                <constraint firstItem="xL0-Fx-cK4" firstAttribute="baseline" secondItem="d0L-Cj-pEO" secondAttribute="baseline" id="XC9-GK-pbX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DQC-4w-L8m" secondAttribute="trailing" constant="23" id="fYT-Hx-KLZ"/>
+                                                <constraint firstItem="d0L-Cj-pEO" firstAttribute="top" secondItem="DQC-4w-L8m" secondAttribute="bottom" constant="8" symbolic="YES" id="fyE-Sy-cSp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8IW-43-NHv" secondAttribute="bottom" constant="8" id="gvv-xO-tsP"/>
+                                                <constraint firstItem="d0L-Cj-pEO" firstAttribute="leading" secondItem="xL0-Fx-cK4" secondAttribute="trailing" constant="8" symbolic="YES" id="i0F-Xq-IOJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xL0-Fx-cK4" secondAttribute="bottom" constant="10" id="jLU-53-1MA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d0L-Cj-pEO" secondAttribute="trailing" constant="33" id="lkm-cr-9Lb"/>
+                                                <constraint firstItem="8IW-43-NHv" firstAttribute="leading" secondItem="aaH-Gt-OON" secondAttribute="leadingMargin" id="wdL-7I-oXv"/>
+                                                <constraint firstItem="DQC-4w-L8m" firstAttribute="leading" secondItem="8IW-43-NHv" secondAttribute="trailing" constant="33" id="xKE-18-a3j"/>
+                                                <constraint firstItem="xL0-Fx-cK4" firstAttribute="top" secondItem="DQC-4w-L8m" secondAttribute="bottom" constant="13" id="y9f-jj-47F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="cookDuration" destination="d0L-Cj-pEO" id="oCV-FF-Bih"/>
+                                            <outlet property="cookName" destination="DQC-4w-L8m" id="qa1-ra-hRc"/>
+                                            <outlet property="personCount" destination="xL0-Fx-cK4" id="SvK-4n-Hg3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QHv-9U-faq" id="Vtg-gH-7bX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k7b-rZ-lt7" firstAttribute="leading" secondItem="KWt-ma-fJB" secondAttribute="leading" id="2N6-g0-48B"/>
+                            <constraint firstAttribute="trailing" secondItem="k7b-rZ-lt7" secondAttribute="trailing" id="TGA-cT-jIC"/>
+                            <constraint firstItem="k7b-rZ-lt7" firstAttribute="top" secondItem="KWt-ma-fJB" secondAttribute="top" constant="20" symbolic="YES" id="hzS-t5-2o6"/>
+                            <constraint firstItem="k7b-rZ-lt7" firstAttribute="bottom" secondItem="0hq-FF-Uo3" secondAttribute="top" id="yPB-vO-z0n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cook Book" id="T6s-ek-TWd"/>
+                    <connections>
+                        <outlet property="tableView" destination="k7b-rZ-lt7" id="FDP-Ag-iR3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIA-JP-kXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306.4000000000001" y="-130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rru-Dg-YfZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bsy-Fs-QkQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KNq-OR-OlR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QHv-9U-faq" kind="relationship" relationship="rootViewController" id="6pd-D3-IzF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ww-QO-w5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367.2" y="-130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>

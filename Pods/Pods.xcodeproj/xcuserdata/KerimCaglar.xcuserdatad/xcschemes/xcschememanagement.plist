@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CookBook.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyBeaver.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0C4B4E57725D18336D282F5D182BE50C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7E2E36E9741D9093C2B0372618E9691</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF3DF4AAFDE669AFA147B5BB020236EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
