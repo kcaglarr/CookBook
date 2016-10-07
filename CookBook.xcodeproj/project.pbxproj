@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		545957E20AF5B95280BA659C /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F89C62ACE068292CCD0017 /* Pods_CookBook.framework */; };
-		71CD5EC11DA183D800C372FA /* CookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD5EC01DA183D800C372FA /* CookModel.swift */; };
 		71E1B5101D9FC9CE000B5A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1B50F1D9FC9CE000B5A6F /* AppDelegate.swift */; };
 		71E1B5181D9FC9CE000B5A6F /* CookBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71E1B5161D9FC9CE000B5A6F /* CookBook.xcdatamodeld */; };
 		71E1B51A1D9FC9CE000B5A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E1B5191D9FC9CE000B5A6F /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		29F89C62ACE068292CCD0017 /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71CD5EC01DA183D800C372FA /* CookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookModel.swift; sourceTree = "<group>"; };
 		71CD5EC21DA2E30E00C372FA /* CookBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		71E1B50C1D9FC9CE000B5A6F /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E1B50F1D9FC9CE000B5A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 		71CD5EBF1DA1839400C372FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				71CD5EC01DA183D800C372FA /* CookModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71CD5EC11DA183D800C372FA /* CookModel.swift in Sources */,
 				71E1B52C1D9FDC6D000B5A6F /* CookBookTableViewCell.swift in Sources */,
 				71E1B5331D9FF4A7000B5A6F /* CookBookViewController.swift in Sources */,
 				71E1B5181D9FC9CE000B5A6F /* CookBook.xcdatamodeld in Sources */,
