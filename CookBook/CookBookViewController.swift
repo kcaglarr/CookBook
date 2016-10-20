@@ -9,7 +9,9 @@
 import UIKit
 import Alamofire
 
-class CookBookViewController: UIViewController,UITableViewDataSource {
+
+class CookBookViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,10 +19,14 @@ class CookBookViewController: UIViewController,UITableViewDataSource {
     var duration = [String]()
     var person = [String]()
     var cookImageName = [String]()
+    var cooksItems = [String]()
+    var cooksDetail = [String]()
     let imageBaseUrl = "http://www.kerimcaglar.com/uploads/yemek-resimler/"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
@@ -58,12 +64,23 @@ class CookBookViewController: UIViewController,UITableViewDataSource {
                             self.person.append(person)
                         }
                         
+                        if let items = cooks["malzemeler"] as? String
+                        {
+                            self.cooksItems.append(items)
+                        }
+                        
+                        if let detail = cooks["tarif"] as? String
+                        {
+                            cooksDetail.append(detail)
+                        }
+                        
                         if let cook_image = cooks["yemek_resim"] as? String
                         {
                             self.cookImageName.append(cook_image)
                         }
                     }
                 }
+                log.info(cooks)
 
             }
             
@@ -86,18 +103,43 @@ class CookBookViewController: UIViewController,UITableViewDataSource {
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let index = tableView.indexPathForSelectedRow
+        let indexPath = NSIndexPath(row: (index?.row)!, section: 0)
+        
+        if segue.identifier == "detailSegue"
+        {
+            let cookDetailVC = segue.destination as! CookBookDetailViewController
+            
+            cookDetailVC.selectedCookItems = cooksItems[indexPath.row] as NSString as String
+            
+            let selectedCookImage =  cookImageName[indexPath.row]
+            
+            cookDetailVC.selectedImageURL = selectedCookImage
+            
+            cookDetailVC.selectedCookDetail = cooksDetail[indexPath.row] as NSString as String
+            
+            log.info("**** \(selectedCookImage) Resmi Seçildi")
+            
+            log.info("BURADA \(cookDetailVC.selectedCookItems!) TETİKLENDİ")
+        }
+        
+        else{
+            log.error("*****HATA****")
+        }
+        
     }
     
     /** Table View Data Source **/
-    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return cooks.count
     }
     
-    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CookBookTableViewCell
         
@@ -115,5 +157,13 @@ class CookBookViewController: UIViewController,UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        log.info("*******************TETIKLENDI********")
+        
+
+    }
+    
+    
     
 }

@@ -80,6 +80,7 @@
                                             <outlet property="cookDuration" destination="d0L-Cj-pEO" id="oCV-FF-Bih"/>
                                             <outlet property="cookName" destination="DQC-4w-L8m" id="qa1-ra-hRc"/>
                                             <outlet property="personCount" destination="xL0-Fx-cK4" id="SvK-4n-Hg3"/>
+                                            <segue destination="YMg-82-bMd" kind="show" identifier="detailSegue" id="YuX-mH-Eur"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,6 +105,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIA-JP-kXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2306.4000000000001" y="-130.88455772113943"/>
+        </scene>
+        <!--Cook Book Detail View Controller-->
+        <scene sceneID="KQj-z8-J90">
+            <objects>
+                <viewController id="YMg-82-bMd" customClass="CookBookDetailViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yju-kD-fqJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sNm-4M-Fi1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlq-5H-hId">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vxh-1y-B61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-rm-RHr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="LwX-v3-RaV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-0E-vFX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Svi-tr-99m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="centerX" secondItem="S8U-rm-RHr" secondAttribute="centerX" id="1Kj-5x-PVE"/>
+                            <constraint firstItem="sNm-4M-Fi1" firstAttribute="top" secondItem="Y7u-0E-vFX" secondAttribute="bottom" constant="43" id="7aU-9M-BK4"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leadingMargin" id="Ewq-EP-Baj"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="leading" secondItem="Y7u-0E-vFX" secondAttribute="leading" id="Fds-6n-HyL"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="top" secondItem="Vxh-1y-B61" secondAttribute="bottom" id="UAb-hl-mMB"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="top" secondItem="rlq-5H-hId" secondAttribute="top" id="ZWg-qy-Nef"/>
+                            <constraint firstItem="Y7u-0E-vFX" firstAttribute="top" secondItem="S8U-rm-RHr" secondAttribute="bottom" constant="8" symbolic="YES" id="kLU-vV-O20"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leading" id="kbZ-gj-F3w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y7u-0E-vFX" secondAttribute="trailing" constant="-7" id="kfD-Gi-8sc"/>
+                            <constraint firstAttribute="trailing" secondItem="Vxh-1y-B61" secondAttribute="trailing" id="qIL-LS-Tbz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recipe" destination="S8U-rm-RHr" id="qb4-Ih-YiS"/>
+                        <outlet property="recipeDetail" destination="Y7u-0E-vFX" id="bZj-p9-5yR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLE-0D-8ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3341.5999999999999" y="-112.89355322338831"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rru-Dg-YfZ">
