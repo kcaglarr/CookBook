@@ -20,8 +20,8 @@ class CookBookDetailViewController: UIViewController {
     
     var selectedImageData: NSData?
     
-    let imageBaseUrl = "http://www.kerimcaglar.com/uploads/yemek-resimler/"
 
+    @IBOutlet weak var recipeImageView: UIImageView!
     
     @IBOutlet weak var recipe: UILabel!
     
@@ -34,10 +34,8 @@ class CookBookDetailViewController: UIViewController {
         log.info("Detay Sayfasındasınız")
         recipe.text = selectedCookItems
         recipeDetail.text = selectedCookDetail
-        let url = NSURL(string:imageBaseUrl + selectedImageURL!)
-        selectedImageData = NSData(contentsOf:(url! as URL))
+        recipeImageView.sd_setImage(with: URL(string:selectedImageURL!))
 
-        
         
     }
 

@@ -16,6 +16,7 @@
 		71E1B5291D9FCC5A000B5A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E1B5281D9FCC5A000B5A6F /* Main.storyboard */; };
 		71E1B52C1D9FDC6D000B5A6F /* CookBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1B52A1D9FDC6D000B5A6F /* CookBookTableViewCell.swift */; };
 		71E1B5331D9FF4A7000B5A6F /* CookBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1B5321D9FF4A7000B5A6F /* CookBookViewController.swift */; };
+		71F86A501E58FC9C00D681A5 /* AddCookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F86A4F1E58FC9C00D681A5 /* AddCookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		71E1B5281D9FCC5A000B5A6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		71E1B52A1D9FDC6D000B5A6F /* CookBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookBookTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		71E1B5321D9FF4A7000B5A6F /* CookBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookBookViewController.swift; sourceTree = "<group>"; };
+		71F86A4F1E58FC9C00D681A5 /* AddCookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCookViewController.swift; sourceTree = "<group>"; };
 		AA0ADF3AC7EB638CC3A52AE0 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
 		F527C76CB46F43C5565B9193 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			children = (
 				71E1B5321D9FF4A7000B5A6F /* CookBookViewController.swift */,
 				717352401DB2834500B4FEC7 /* CookBookDetailViewController.swift */,
+				71F86A4F1E58FC9C00D681A5 /* AddCookViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Kerim Çağlar";
 				TargetAttributes = {
 					71E1B50B1D9FC9CE000B5A6F = {
@@ -252,6 +255,7 @@
 				71E1B5331D9FF4A7000B5A6F /* CookBookViewController.swift in Sources */,
 				71E1B5181D9FC9CE000B5A6F /* CookBook.xcdatamodeld in Sources */,
 				71E1B5101D9FC9CE000B5A6F /* AppDelegate.swift in Sources */,
+				71F86A501E58FC9C00D681A5 /* AddCookViewController.swift in Sources */,
 				717352411DB2834500B4FEC7 /* CookBookDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

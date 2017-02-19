@@ -21,19 +21,21 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
     var cookImageName = [String]()
     var cooksItems = [String]()
     var cooksDetail = [String]()
-    let imageBaseUrl = "http://www.kerimcaglar.com/uploads/yemek-resimler/"
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
+
         
         Alamofire.request("http://www.kerimcaglar.com/yemek-tarifi").responseJSON { response in
             
             self.retrieveData(JSONData: response.data!)
+            
         }
+        
     }
     
     func retrieveData(JSONData:Data)
@@ -81,17 +83,18 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
                     }
                 }
                 log.info(cooks)
-
+                
             }
             
-                self.tableView.reloadData()
-
+            self.tableView.reloadData()
+            
         }
         catch
         {
             log.error(error)
         }
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,7 +110,8 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let index = tableView.indexPathForSelectedRow
+        
+        var index = tableView.indexPathForSelectedRow
         let indexPath = NSIndexPath(row: (index?.row)!, section: 0)
         
         if segue.identifier == "detailSegue"
@@ -127,11 +131,20 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
             log.info("BURADA \(cookDetailVC.selectedCookItems!) TETİKLENDİ")
         }
         
+        if (indexPath.length == 0)
+        {
+            if segue.identifier == "addSegue"
+            {
+                print("ddd")
+            }
+        }
+            
         else{
             log.error("*****HATA****")
         }
         
     }
+    
     
     /** Table View Data Source **/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -143,9 +156,11 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CookBookTableViewCell
         
-
+        cell.backgroundColor = .clear
+        
+        
         let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.sd_setImage(with: URL(string: imageBaseUrl + cookImageName[indexPath.row]))
+        imageView.sd_setImage(with: URL(string: cookImageName[indexPath.row]))
         
         cell.cookName.text = cooks[indexPath.row]
         cell.cookName.textColor = UIColor.white
@@ -160,10 +175,7 @@ class CookBookViewController: UIViewController,UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         log.info("*******************TETIKLENDI********")
-        
 
     }
-    
-    
     
 }
