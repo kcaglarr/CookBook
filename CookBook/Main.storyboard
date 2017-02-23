@@ -23,40 +23,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-5e-oLZ">
-                                <rect key="frame" x="0.0" y="78" width="375" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-5e-oLZ">
+                                <rect key="frame" x="0.0" y="78" width="375" height="259"/>
                                 <state key="normal" title="Yemek Listesi" image="list-cook"/>
                                 <state key="highlighted" image="list-cook"/>
                                 <connections>
                                     <segue destination="QHv-9U-faq" kind="show" identifier="listSegue" id="onb-WQ-UVy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-aR-2aV">
-                                <rect key="frame" x="0.0" y="350" width="375" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-aR-2aV">
+                                <rect key="frame" x="0.0" y="357" width="375" height="217"/>
                                 <state key="normal" title="Yemek Ekle" image="add-cook"/>
                                 <state key="highlighted" image="add-cook"/>
                                 <connections>
                                     <segue destination="6FB-e0-9mH" kind="show" identifier="addSegue" id="HBC-wU-3yT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yemek Listesi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psv-0z-l3K">
-                                <rect key="frame" x="212" y="194" width="147" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yemek Ekleme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-CL-9RZ">
-                                <rect key="frame" x="212" y="423" width="147" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qhy-aR-2aV" secondAttribute="trailing" id="2MP-J4-E6N"/>
+                            <constraint firstAttribute="trailing" secondItem="2ka-5e-oLZ" secondAttribute="trailing" id="KgD-gd-dh5"/>
+                            <constraint firstItem="2ka-5e-oLZ" firstAttribute="leading" secondItem="Dt6-yy-eur" secondAttribute="leading" id="Krw-nI-MmU"/>
+                            <constraint firstItem="2ka-5e-oLZ" firstAttribute="top" secondItem="bX9-hf-vIa" secondAttribute="bottom" constant="14" id="dbE-LA-3IY"/>
+                            <constraint firstItem="Qhy-aR-2aV" firstAttribute="leading" secondItem="Dt6-yy-eur" secondAttribute="leading" id="eyK-5I-iu2"/>
+                            <constraint firstItem="Qhy-aR-2aV" firstAttribute="top" secondItem="2ka-5e-oLZ" secondAttribute="bottom" constant="20" id="vE0-Eq-9mR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cook Book" id="w5g-GR-wvB"/>
                 </viewController>
@@ -101,7 +93,9 @@
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8IW-43-NHv">
                                                     <rect key="frame" x="8" y="18" width="65" height="66"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="KiS-7j-6Dw"/>
                                                         <constraint firstAttribute="width" constant="65" id="Kqp-he-Ebg"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="v4a-0Z-7Zx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL0-Fx-cK4">
@@ -126,9 +120,11 @@
                                             <color key="backgroundColor" red="1" green="0.93165752130000001" blue="0.72549227709999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="8IW-43-NHv" firstAttribute="top" secondItem="aaH-Gt-OON" secondAttribute="topMargin" constant="10" id="EHV-c6-ih7"/>
+                                                <constraint firstItem="8IW-43-NHv" firstAttribute="leading" secondItem="aaH-Gt-OON" secondAttribute="leadingMargin" id="ETo-aq-AVg"/>
                                                 <constraint firstItem="DQC-4w-L8m" firstAttribute="leading" secondItem="xL0-Fx-cK4" secondAttribute="leading" id="K3o-Un-l6N"/>
                                                 <constraint firstItem="8IW-43-NHv" firstAttribute="top" secondItem="DQC-4w-L8m" secondAttribute="top" id="Na8-pH-Elh"/>
                                                 <constraint firstItem="xL0-Fx-cK4" firstAttribute="baseline" secondItem="d0L-Cj-pEO" secondAttribute="baseline" id="XC9-GK-pbX"/>
+                                                <constraint firstItem="8IW-43-NHv" firstAttribute="top" secondItem="aaH-Gt-OON" secondAttribute="topMargin" constant="10" id="dEe-JZ-h9g"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DQC-4w-L8m" secondAttribute="trailing" constant="23" id="fYT-Hx-KLZ"/>
                                                 <constraint firstItem="d0L-Cj-pEO" firstAttribute="top" secondItem="DQC-4w-L8m" secondAttribute="bottom" constant="8" symbolic="YES" id="fyE-Sy-cSp"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8IW-43-NHv" secondAttribute="bottom" constant="8" id="gvv-xO-tsP"/>
