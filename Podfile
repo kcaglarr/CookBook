@@ -10,4 +10,5 @@ target 'CookBook' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyBeaver'
   pod 'SDWebImage'
+  pod 'AARatingBar'
 end

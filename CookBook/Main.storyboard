@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,20 +22,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-5e-oLZ">
-                                <rect key="frame" x="0.0" y="78" width="375" height="259"/>
-                                <state key="normal" title="Yemek Listesi" image="list-cook"/>
-                                <state key="highlighted" image="list-cook"/>
-                                <connections>
-                                    <segue destination="QHv-9U-faq" kind="show" identifier="listSegue" id="onb-WQ-UVy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhy-aR-2aV">
                                 <rect key="frame" x="0.0" y="357" width="375" height="217"/>
                                 <state key="normal" title="Yemek Ekle" image="add-cook"/>
                                 <state key="highlighted" image="add-cook"/>
                                 <connections>
                                     <segue destination="6FB-e0-9mH" kind="show" identifier="addSegue" id="HBC-wU-3yT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-5e-oLZ">
+                                <rect key="frame" x="0.0" y="78" width="375" height="259"/>
+                                <state key="normal" title="Yemek Listesi" image="list-cook"/>
+                                <state key="highlighted" image="list-cook"/>
+                                <connections>
+                                    <segue destination="QHv-9U-faq" kind="show" identifier="listSegue" id="onb-WQ-UVy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="3030" y="-52"/>
         </scene>
-        <!--Cook Book Detail View Controller-->
+        <!--Cook Detail-->
         <scene sceneID="KQj-z8-J90">
             <objects>
                 <viewController id="YMg-82-bMd" customClass="CookBookDetailViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,49 +266,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vxh-1y-B61">
-                                <rect key="frame" x="0.0" y="64" width="375" height="240"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="184"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="FJp-xL-ZOh"/>
-                                    <constraint firstAttribute="width" secondItem="Vxh-1y-B61" secondAttribute="height" multiplier="25:16" id="Py8-zI-fQH"/>
-                                    <constraint firstAttribute="width" constant="375" id="Uk7-7x-gyP"/>
+                                    <constraint firstAttribute="height" constant="184" id="7oJ-QR-yC3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-rm-RHr">
-                                <rect key="frame" x="0.0" y="312" width="375" height="152"/>
+                                <rect key="frame" x="0.0" y="317" width="375" height="94"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="Fvv-SJ-GYr"/>
-                                    <constraint firstAttribute="width" constant="375" id="pyE-9I-noT"/>
+                                    <constraint firstAttribute="height" constant="94" id="l4F-Xq-MIF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-0E-vFX">
-                                <rect key="frame" x="0.0" y="472" width="375" height="195"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="54D-aR-oiI"/>
-                                    <constraint firstAttribute="width" constant="375" id="KiJ-kO-lu7"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="419" width="375" height="248"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puan Verin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMg-OA-4r5">
+                                <rect key="frame" x="16" y="270" width="108" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="QAn-fc-wKv"/>
+                                    <constraint firstAttribute="height" constant="21" id="u3f-Tc-wK1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ICE-9a-weR" customClass="AARatingBar" customModule="AARatingBar">
+                                <rect key="frame" x="142" y="264" width="217" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="Cex-6F-X02"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.062725612759999994" blue="0.02918666089" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="canAnimate" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S8U-rm-RHr" firstAttribute="top" secondItem="Vxh-1y-B61" secondAttribute="bottom" constant="8" id="EPR-In-DUe"/>
-                            <constraint firstItem="Vxh-1y-B61" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leading" id="FUQ-1v-iPz"/>
-                            <constraint firstItem="sNm-4M-Fi1" firstAttribute="top" secondItem="Y7u-0E-vFX" secondAttribute="bottom" id="TbG-TW-S8D"/>
-                            <constraint firstItem="Vxh-1y-B61" firstAttribute="top" secondItem="yju-kD-fqJ" secondAttribute="bottom" id="e2b-Iy-PdK"/>
-                            <constraint firstItem="Y7u-0E-vFX" firstAttribute="top" secondItem="S8U-rm-RHr" secondAttribute="bottom" constant="8" id="gYw-gE-nV7"/>
-                            <constraint firstItem="Y7u-0E-vFX" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leading" id="gxd-Js-Ac4"/>
-                            <constraint firstAttribute="trailing" secondItem="S8U-rm-RHr" secondAttribute="trailing" id="hmI-4J-w62"/>
-                            <constraint firstAttribute="trailing" secondItem="Vxh-1y-B61" secondAttribute="trailing" id="jcQ-Vv-l9r"/>
-                            <constraint firstItem="S8U-rm-RHr" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leading" id="uqi-MC-kcE"/>
-                            <constraint firstAttribute="trailing" secondItem="Y7u-0E-vFX" secondAttribute="trailing" id="yj9-0c-5lq"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="trailing" secondItem="Y7u-0E-vFX" secondAttribute="trailing" id="EW5-Ek-i0B"/>
+                            <constraint firstItem="Y7u-0E-vFX" firstAttribute="bottom" secondItem="sNm-4M-Fi1" secondAttribute="top" id="JUu-dK-dit"/>
+                            <constraint firstAttribute="trailing" secondItem="ICE-9a-weR" secondAttribute="trailing" constant="16" id="JjN-oi-Ekj"/>
+                            <constraint firstItem="sMg-OA-4r5" firstAttribute="top" secondItem="Vxh-1y-B61" secondAttribute="bottom" constant="22" id="KZc-zU-UBt"/>
+                            <constraint firstAttribute="trailing" secondItem="Vxh-1y-B61" secondAttribute="trailing" id="Omt-9R-Txf"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="leading" secondItem="Y7u-0E-vFX" secondAttribute="leading" id="PFp-dc-QTL"/>
+                            <constraint firstItem="S8U-rm-RHr" firstAttribute="top" secondItem="ICE-9a-weR" secondAttribute="bottom" constant="20" id="R2h-AS-gxB"/>
+                            <constraint firstItem="Y7u-0E-vFX" firstAttribute="top" secondItem="S8U-rm-RHr" secondAttribute="bottom" constant="8" symbolic="YES" id="UVa-rK-YQH"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="trailing" secondItem="S8U-rm-RHr" secondAttribute="trailing" id="dzj-c6-ALl"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="top" secondItem="yju-kD-fqJ" secondAttribute="bottom" id="eS0-49-QNX"/>
+                            <constraint firstItem="ICE-9a-weR" firstAttribute="leading" secondItem="sMg-OA-4r5" secondAttribute="trailing" constant="18" id="gVP-Rs-Nnv"/>
+                            <constraint firstItem="sMg-OA-4r5" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leadingMargin" id="kdk-AD-pQs"/>
+                            <constraint firstItem="ICE-9a-weR" firstAttribute="top" secondItem="Vxh-1y-B61" secondAttribute="bottom" constant="16" id="mBS-qB-bn2"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="leading" secondItem="rlq-5H-hId" secondAttribute="leading" id="oN0-lg-Qiz"/>
+                            <constraint firstItem="sMg-OA-4r5" firstAttribute="centerY" secondItem="ICE-9a-weR" secondAttribute="centerY" id="qM7-5K-tqG"/>
+                            <constraint firstItem="ICE-9a-weR" firstAttribute="top" secondItem="Vxh-1y-B61" secondAttribute="bottom" constant="16" id="r56-jY-wdd"/>
+                            <constraint firstItem="Vxh-1y-B61" firstAttribute="leading" secondItem="S8U-rm-RHr" secondAttribute="leading" id="vBN-L9-P6p"/>
+                            <constraint firstItem="ICE-9a-weR" firstAttribute="trailing" secondItem="rlq-5H-hId" secondAttribute="trailingMargin" id="wg0-SO-Kjz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Cook Detail" id="ZOF-IW-da0"/>
                     <connections>
+                        <outlet property="ratingBar" destination="ICE-9a-weR" id="yrz-ho-cj2"/>
                         <outlet property="recipe" destination="S8U-rm-RHr" id="qb4-Ih-YiS"/>
                         <outlet property="recipeDetail" destination="Y7u-0E-vFX" id="bZj-p9-5yR"/>
                         <outlet property="recipeImageView" destination="Vxh-1y-B61" id="0Bj-Dv-fvr"/>

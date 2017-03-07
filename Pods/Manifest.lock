@@ -1,4 +1,5 @@
 PODS:
+  - AARatingBar (0.1.0)
   - Alamofire (4.0.1)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -6,15 +7,17 @@ PODS:
   - SwiftyBeaver (1.0.3)
 
 DEPENDENCIES:
+  - AARatingBar
   - Alamofire (~> 4.0)
   - SDWebImage
   - SwiftyBeaver
 
 SPEC CHECKSUMS:
+  AARatingBar: dd2f4b489478f5206930bb5f8f67b4db476265c8
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyBeaver: e42a664ffbdb5ec68ce968ffd3c54f619c92e0d7
 
-PODFILE CHECKSUM: ed30f9d1524238abe97b80fe55c82ffb23f0814a
+PODFILE CHECKSUM: b3f725c7908dde5526372b06208b066add1906c6
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

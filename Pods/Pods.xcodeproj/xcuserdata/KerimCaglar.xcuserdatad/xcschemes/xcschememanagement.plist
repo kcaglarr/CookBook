@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AARatingBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C4B4E57725D18336D282F5D182BE50C</key>
+		<key>14F1B0936DCDEFCC5FCA7655A881E40E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>4BDB99B43283D14E0D93546B50C943BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7E2E36E9741D9093C2B0372618E9691</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF3DF4AAFDE669AFA147B5BB020236EE</key>
+		<key>C793CF4E330F08EECD1EE31655C29C74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9CE51E0578E842A70FFCFBBD402587F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

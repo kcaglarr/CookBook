@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AARatingBar
 
 class CookBookDetailViewController: UIViewController {
     
@@ -20,12 +21,14 @@ class CookBookDetailViewController: UIViewController {
     
     var selectedImageData: NSData?
     
-
+    @IBOutlet weak var ratingBar: AARatingBar!
+    
     @IBOutlet weak var recipeImageView: UIImageView!
     
     @IBOutlet weak var recipe: UILabel!
     
     @IBOutlet weak var recipeDetail: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +38,13 @@ class CookBookDetailViewController: UIViewController {
         recipe.text = selectedCookItems
         recipeDetail.text = selectedCookDetail
         recipeImageView.sd_setImage(with: URL(string:selectedImageURL!))
-
         
+        ratingBar.ratingDidChange = { ratingValue in
+            
+            print(ratingValue)
+            
+        }
+                
     }
 
     override func didReceiveMemoryWarning() {
